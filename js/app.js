@@ -20,7 +20,7 @@ const addPost = async () => {
   const resultText = await checkAndGenerate(useridInput.value, titleInput.value, articleInput.value);
 
   // create single article container
-  const element = createElement("p", resultText);
+  // const element = createElement("p", resultText);
 
   // append new article container to article list
   const articleList = document.querySelector(".article-list");
