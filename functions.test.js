@@ -46,3 +46,35 @@ test('Should be under 1600', () => {
   });
 
 
+//   Regex 
+test ('There is no I in team',()=>{
+    expect('team').not.toMatch(/I/)
+})
+
+// Arrays  
+
+test('Mahtab should be usernames',()=>{
+    usernames=['Shawon', 'Mona', 'Fatema', 'Pavel'];
+
+expect(usernames).toContain('Fatema')
+})
+
+
+// Working with asysnc file 
+// Promise 
+test ('User fetch name should be Leanne Graham',()=>{
+    expect.assertions(1);
+
+    return functions.userfetch()
+    .then(data =>{
+        expect(data.name).toEqual('Leanne Graham')
+    })
+})
+
+// Async Await 
+// test('User fetched name should be Leanne Graham', async () => {
+//     expect.assertions(1);
+//     const data = await functions.fetchUser();
+//     expect(data.name).toEqual('Leanne Graham');
+//   });
+
